@@ -1,0 +1,231 @@
+:root{
+    --text-color: #ffc0cb;
+
+    --main-color: #fff;
+}
+
+a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+body{
+    margin: 0;
+    padding: 0;
+
+    font-family: Arial, Helvetica, sans-serif;
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    color: var(--text-color);
+}
+
+header {
+    background-color: var(--main-color);
+    margin-bottom: 20px;
+    padding: 0px 2vw;
+
+    font-weight: 700;
+    font-size: 1.2rem;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+
+    text-align: center;
+
+    border-bottom: 1px solid var(--text-color);
+    filter: drop-shadow(0 0 0.4rem var(--text-color));
+}
+
+header .link {
+    color: var(--text-color);
+    transition: 0.2s;
+    padding: 16px;
+    flex-grow: 1;
+}
+
+header .link:hover {
+    color: var(--main-color);
+    background-color: var(--text-color);
+}
+
+.login-cnt {
+    margin: 0 auto;
+    text-align: center;
+    background: var(--main-color);
+    padding: 3vh 24px;
+    border-radius: 20px;
+    border: 1px solid var(--text-color);
+    filter: drop-shadow(0 0 0.25rem var(--text-color));
+}
+
+.login-cnt .message {
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    border: 1px solid var(--text-color);
+    border-radius: 10px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    padding: 10px 10px;
+    margin-bottom: 10px;
+    background: var(--main-color);
+}
+
+.login-cnt form {
+    display: flex;
+    flex-direction: column;
+}
+
+.login-cnt label {
+    text-align: left;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.login-cnt form > * {
+    margin-bottom: 10px;
+}
+
+.login-cnt form > *:last-child {
+    margin-bottom: 0;
+}
+
+.login-cnt input {
+    border: 1px solid var(--text-color);
+    border-radius: 6px;
+    padding: 4px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.login-cnt input:focus {
+    outline: none;
+}
+
+.login-cnt #submit {
+    background-color: var(--main-color);
+    color: var(--text-color);
+    margin-top: 10px;
+    padding: 6px 20px;
+    font-size: 1rem;
+    transition: 0.2s;
+    width: auto;
+}
+
+.login-cnt #submit:focus,
+.login-cnt #submit:hover {
+    background-color: var(--text-color);
+    color: var(--main-color);
+}
+
+.login-cnt .under {
+    margin-top: 12px;
+    font-size: 0.8rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.login-cnt button {
+    text-decoration: underline;
+    padding: 0 5px;
+    background: none;
+    border: 0;
+    color: var(--text-color);
+}
+
+.login-cnt button:hover {
+    opacity: 70%;
+    cursor: pointer;
+}
+
+.prf-cnt {
+    margin: 0 20px;
+}
+
+.prf-cnt .prf-upper {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.prf-cnt .main-info {
+    padding: 3vh 20px;
+    background: var(--main-color);
+    border-radius: 20px;
+    border: 1px solid var(--text-color);
+    filter: drop-shadow(0 0 0.25rem var(--text-color));
+    display: flex;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    gap: 10px 15px;
+}
+
+.prf-cnt .profile-img {
+    display: inline-block;
+    width: 50%;
+    border: 1px solid var(--text-color);
+    border-radius: 10px;
+}
+
+.prf-info {
+    display: inline-block;
+    height: 100%;
+}
+
+.prf-upper .info-row {
+    margin-bottom: 10px;
+}
+
+.prf-upper .info {
+    font-size: 0.8rem;
+}
+
+.prf-cnt h1 {
+    margin: 0;
+    margin-bottom: 15px;
+}
+
+.prf-upper .row-p {
+    margin: 0;
+    font-weight: 700;
+}
+
+.prf-control {
+    padding: 3vh 24px;
+    background: var(--main-color);
+    border-radius: 20px;
+    border: 1px solid var(--text-color);
+    filter: drop-shadow(0 0 0.25rem var(--text-color));
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-grow: 5;
+}
+
+.prf-control .info-row {
+    width: 50%;
+    height: 50%;
+}
+
+footer {
+    background-color: var(--main-color);
+    padding: 20px 2vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.8rem;
+    flex-wrap: wrap;
+
+    border-top: 1px solid var(--text-color);
+    filter: drop-shadow(0 0 0.4rem var(--text-color));
+}

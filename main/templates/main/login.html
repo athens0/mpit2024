@@ -1,0 +1,48 @@
+{% extends 'main/layout.html' %}
+{% load static %}
+
+{% block title %}Вход{% endblock %}
+
+{% block content %}
+<div class="login-cnt">
+    {% if form %}
+        <div class="message">{{ form }}</div>
+    {% endif %}
+    {% if message %}
+        <div class="message">{{ message }}</div>
+    {% endif %}
+    {% if error %}
+        <div class="message">{{ error }}</div>
+    {% endif %}
+    <h1 id="login_title">Вход</h1>
+    <form method="post" id="lform">
+        {% csrf_token %}
+        <input type="number" name="type" id="type" min="0" max="2" value="1" hidden>
+        <div id="usrc">
+            <label for="username">Имя пользователя</label>
+            <input type="text" name="username" id="username">
+        </div>
+        <div id="emlc" hidden>
+            <label for="email">Почта</label>
+            <input type="email" name="email" id="email">
+        </div>
+        <div id="psw1c">
+            <label for="password1">Пароль</label>
+            <input type="password" name="password1" id="password1">
+        </div>
+        <div id="psw2c" hidden>
+            <label for="password2">Подтверждение</label>
+            <input type="password" name="password2" id="password2">
+        </div>
+        <div>
+            <input type="submit" value="Войти" id="submit">
+        </div>
+    </form>
+    <div class="under">
+        <button id="login_reg">Регистрация</button>
+        <button id="login_log" hidden>Вход</button>
+        <button id="login_rec">Восстановление</button>
+    </div>
+    <script src="{% static 'main/js/login.js' %}"></script>
+</div>
+{% endblock %}

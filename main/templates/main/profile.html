@@ -1,0 +1,57 @@
+{% extends 'main/layout.html' %}
+
+{% block title %}Профиль{% endblock %}
+
+{% block content %}
+<div class="prf-cnt">
+    <div class="prf-upper">
+        <div class="main-info">
+            <img src="https://userpic.codeforces.org/2474219/title/9502f7194bdb05e5.jpg" alt="Фото профиля" class="profile-img">
+            <div class="prf-info">
+                <div class="info-row">
+                    <span class="info">Пользователь</span>
+                    <h1 class="username">{{ user.username }}</h1>
+                </div>
+                <div class="info-row">
+                    <span class="info">Почта</span>
+                    <p class="row-p">{{ user.email }}</p>
+                </div>
+                <div class="info-row">
+                    <span class="info">На сайте с</span>
+                    <p class="row-p">{{ date_joined }}</p>
+                </div>
+                <div>
+                    <span class="info">Последний вход</span>
+                    <p class="row-p">{{ last_login }}</p>
+                </div>
+            </div>
+        </div>
+        <div class="prf-control">
+            <div>
+                <div class="info-row">
+                    <span class="info">Рейтинг</span>
+                    <p class="row-p">{% if user_rating %}{{ user_rating }}{% else %}N/A{% endif %}</p>
+                </div>
+                <div class="info-row">
+                    <span class="info">Публикации</span>
+                    <p class="row-p">{% if nbr_publ %}{{ nbr_publ }}{% else %}N/A{% endif %}</p>
+                </div>
+                <div class="info-row">
+                    <span class="info">Последняя публикация</span>
+                    <p class="row-p">{% if last_publ %}{{ last_publ }}{% else %}N/A{% endif %}</p>
+                </div>
+                <div class="info-row">
+                    <span class="info">Последняя публикация</span>
+                    <p class="row-p">{{ last_publ }}</p>
+                </div>
+            </div>
+            <div>
+
+            </div>
+        </div>
+    </div>
+    <div class="profile-under">
+
+    </div>
+</div>
+{% endblock %}

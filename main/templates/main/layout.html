@@ -1,0 +1,30 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'main/css/style.css' %}">
+</head>
+<body>
+    <header>
+        <a href="/" class="link">Главная</a>
+        <a href="/search" class="link">Поиск</a>
+        <a href="/gallery" class="link">Галерея</a>
+        <a href="/news" class="link">Новости</a>
+        <a href="/about" class="link">О проекте</a>
+        {% if user.is_authenticated %}
+            <a href="/profile" class="link">{{ user.username }}</a>
+        {% else %}
+            <a href="/login" class="link">Войти</a>
+        {% endif %}
+    </header>
+    <script src="{% static 'main/js/header.js' %}"></script>
+    {% block content %}{% endblock %}
+    <footer>
+        <span>© athens1ru 2023</span>
+        <a href="https://discordapp.com/users/513994021367185420">Обратная связь</a>
+    </footer>
+</body>
+</html>
