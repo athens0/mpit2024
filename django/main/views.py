@@ -7,17 +7,14 @@ from django.contrib.auth import authenticate, login, logout
 def index(request):
     return render(request, 'main/index.html')
 
-def search(request):
-    return render(request, 'main/search.html')
+def analytics(request):
+    return render(request, 'main/analytics.html')
 
-def gallery(request):
-    return render(request, 'main/gallery.html')
+def teams(request):
+    return render(request, 'main/teams.html')
 
-def news(request):
-    return render(request, 'main/news.html')
-
-def about(request):
-    return render(request, 'main/about.html')
+def matches(request):
+    return render(request, 'main/matches.html')
 
 def profile(request):
     if not request.user.is_authenticated:

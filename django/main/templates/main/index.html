@@ -1,5 +1,5 @@
 {% extends 'main/layout.html' %}
-
+{% load static %}
 {% block title %}Главная{% endblock %}
 
 {% block content %}
@@ -42,7 +42,37 @@
         </div>
     </div>
 </div>
-<div class="container" style="background-color: #EEEEEE;">
-    
+<div class="container" style="background-color: #EEEEEE; padding-top: 70px;">
+    <div class="flex vertical">
+        <div style="position: absolute; right: 20%;">
+            <h1 class="angry" style="font-weight: 500;">СБОРНЫЕ <span class="color">СПБПУ</span></h1>
+            <p class="angry">
+                Студенческий спортивный клуб <br> «Черные Медведи-Политех»
+            </p>
+        </div>
+        <img style="width: 80%;" src="{% static 'main/img/Union.png' %}" alt="">
+        <div class="angry" style="padding-top: 12%">
+            <div style="margin-left: 30px; background-color: #00392A; padding: 15px 15px; border-radius: 20px; color: #EEEEEE; text-align: center;">
+                <p>1000+</p>
+                <p>Спортсменов</p>
+            </div>
+            <div style="margin-top: 30px; margin-left: 30px; background-color: #00392A; padding: 15px 15px; border-radius: 20px; color: #EEEEEE; text-align: center;">
+                <p>40+</p>
+                <p>спортивно-массовых мероприятий в год</p>
+            </div>
+            <div style="margin-top: 30px; margin-left: 30px; background-color: #00392A; padding: 15px 15px; border-radius: 20px; color: #EEEEEE; text-align: center;">
+                <p>52</p>
+                <p>вида спорта и сборных команд по ним</p>
+            </div>
+        </div>
+    </div>
+    <div style="position: absolute; left: 12%; transform: translate(0, -100px);">
+        <p class="angry" style="font-size: larger;">
+            «Любить то, <br> чем ты занимаешься»
+        </p>
+    </div>
+    <div style="width: 100%; display: flex; justify-content: center; margin-top: 30px;">
+        <a href="" class="main-button">К СБОРНЫМ >>>></a>
+    </div>
 </div>
 {% endblock %}
