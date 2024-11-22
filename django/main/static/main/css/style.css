@@ -16,6 +16,14 @@ a {
     color: var(--text-color);
 }
 
+.angry {
+    font-family: 'Angry';
+}
+
+.color {
+    color: var(--header-text);
+}
+
 body{
     margin: 0;
     padding: 0;
@@ -34,6 +42,7 @@ header {
     background-color: var(--background-color);
     margin-bottom: 20px;
     margin: 0px 8vw;
+    padding-top: 10px;
 
     font-weight: 700;
     font-size: 1.2rem;
@@ -50,18 +59,68 @@ header {
 
 header .logo {
     height: 30px;
+    margin-right: 3vw;
 }
 
 header .link {
     color: var(--header-text);
     transition: 0.2s;
-    padding: 16px;
-    flex-grow: 1;
+    padding: 20px;
+    flex-grow: 1 0;
     font-family: 'Angry';
 }
 
 header .link:hover {
     color: var(--header-highlight);
+}
+
+.container {
+    padding: 8vh 8vw;
+}
+
+.flex {
+    display: flex;
+}
+
+.horizontal {
+    flex-direction: column;
+}
+
+.vertical {
+    flex-direction: row;
+}
+
+.square {
+    background-color: #D9D9D9;
+    border-radius: 15px;
+    margin-left: 20px;
+    flex-grow: 1;
+}
+
+.main-text {
+    text-align: center;
+}
+
+.main-flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: end;
+    width: 100%;
+}
+
+.main-button {
+    background-color: #222222;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 15px;
+}
+
+.circle-image {
+    border-radius: 50%;
+    width: 240px;
+    height: 240px;
+    background-color: #fff;
 }
 
 .login-cnt {
@@ -228,8 +287,9 @@ header .link:hover {
 }
 
 footer {
-    background-color: var(--background-color);
-    padding: 20px 2vw;
+    background-color: #2D2D32;
+    color: white;
+    padding: 20px 8vw;
     display: flex;
     justify-content: space-between;
     align-items: center;
