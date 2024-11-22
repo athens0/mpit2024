@@ -1,7 +1,14 @@
-:root{
-    --text-color: #ffc0cb;
+@font-face {
+    font-family: Angry;
+    src: url(ANGRY.OTF);
+}
 
-    --main-color: #fff;
+:root{
+    --text-color: #000000;
+    --header-text: #105D3B;
+    --header-highlight: #00392A;
+
+    --background-color: #ffffff;
 }
 
 a {
@@ -24,9 +31,9 @@ body{
 }
 
 header {
-    background-color: var(--main-color);
+    background-color: var(--background-color);
     margin-bottom: 20px;
-    padding: 0px 2vw;
+    margin: 0px 8vw;
 
     font-weight: 700;
     font-size: 1.2rem;
@@ -38,26 +45,29 @@ header {
 
     text-align: center;
 
-    border-bottom: 1px solid var(--text-color);
-    filter: drop-shadow(0 0 0.4rem var(--text-color));
+    border-bottom: 2px solid var(--text-color);
+}
+
+header .logo {
+    height: 30px;
 }
 
 header .link {
-    color: var(--text-color);
+    color: var(--header-text);
     transition: 0.2s;
     padding: 16px;
     flex-grow: 1;
+    font-family: 'Angry';
 }
 
 header .link:hover {
-    color: var(--main-color);
-    background-color: var(--text-color);
+    color: var(--header-highlight);
 }
 
 .login-cnt {
     margin: 0 auto;
     text-align: center;
-    background: var(--main-color);
+    background: var(--background-color);
     padding: 3vh 24px;
     border-radius: 20px;
     border: 1px solid var(--text-color);
@@ -74,7 +84,7 @@ header .link:hover {
     font-weight: 700;
     padding: 10px 10px;
     margin-bottom: 10px;
-    background: var(--main-color);
+    background: var(--background-color);
 }
 
 .login-cnt form {
@@ -109,7 +119,7 @@ header .link:hover {
 }
 
 .login-cnt #submit {
-    background-color: var(--main-color);
+    background-color: var(--background-color);
     color: var(--text-color);
     margin-top: 10px;
     padding: 6px 20px;
@@ -121,7 +131,7 @@ header .link:hover {
 .login-cnt #submit:focus,
 .login-cnt #submit:hover {
     background-color: var(--text-color);
-    color: var(--main-color);
+    color: var(--background-color);
 }
 
 .login-cnt .under {
@@ -158,7 +168,7 @@ header .link:hover {
 
 .prf-cnt .main-info {
     padding: 3vh 20px;
-    background: var(--main-color);
+    background: var(--background-color);
     border-radius: 20px;
     border: 1px solid var(--text-color);
     filter: drop-shadow(0 0 0.25rem var(--text-color));
@@ -200,7 +210,7 @@ header .link:hover {
 
 .prf-control {
     padding: 3vh 24px;
-    background: var(--main-color);
+    background: var(--background-color);
     border-radius: 20px;
     border: 1px solid var(--text-color);
     filter: drop-shadow(0 0 0.25rem var(--text-color));
@@ -218,7 +228,7 @@ header .link:hover {
 }
 
 footer {
-    background-color: var(--main-color);
+    background-color: var(--background-color);
     padding: 20px 2vw;
     display: flex;
     justify-content: space-between;
