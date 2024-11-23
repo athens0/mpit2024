@@ -3,34 +3,50 @@ from .forms import UserRegisterForm
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login, logout
 from .models import Match, Team, Prediction
-from datetime import date, timedelta
+from .db_worker import update
+from datetime import date, timedelta, datetime
 
 def index(request):
     return render(request, 'main/index.html')
 
-def analytics(request):
+def analytics(request, month=-1):
     data = dict()
-    ms = Prediction.objects.filter(date__year='2024', date__month='11')
-    cur = date(2024, 11, 1)
+    if month == -1:
+        month = datetime.now().month
+    ms = Prediction.objects.filter(date__year='2024', date__month=str(month))
+    cur = date(2024, month, 1)
     rows = []
-    while (cur.weekday != 0):
+    while cur.weekday() != 0:
         cur -= timedelta(days=1)
-    while cur.month != 11:
-        rows.append((cur.day, "hide", -1))
+    while cur.month != month:
+        rows.append((cur.day, "hide", -1, ""))
         cur += timedelta(days=1)
     for day in ms:
-        if cur.weekday == 6:
-            rows.append((cur.day, "red", day.result))
+        color_of = ""
+        if day.result > 0.7:
+            color_of = "good"
+        elif day.result > 0.5:
+            color_of = "imm"
         else:
-            rows.append((cur.day, "", day.result))
-        cur += timedelta(days=1)
-    while cur.weekday != 1:
-        if cur.weekday == 6:
-            rows.append((cur.day, "hide red", -1))
+            color_of = "bad"
+        if cur.weekday() == 6:
+            rows.append((cur.day, "red", round(day.result * 100), color_of))
         else:
-            rows.append((cur.day, "hide", -1))
+            rows.append((cur.day, "", round(day.result * 100), color_of))
         cur += timedelta(days=1)
-
+    while cur.weekday() != 1:
+        if cur.weekday() == 6:
+            rows.append((cur.day, "hide red", -1, ""))
+        else:
+            rows.append((cur.day, "hide", -1, ""))
+        cur += timedelta(days=1)
+    rows_front = []
+    for i in range(7, 7 * 5, 7):
+        rows_front.append(rows[i - 7:i])
+    data['rows'] = rows_front
+    data['month'] = date(year=2024, month=month, day=1).strftime("%Y %m")
+    data['prev'] = f"../analytics/{month - 1}"
+    data['next'] = f"../analytics/{month + 1}"
     return render(request, 'main/analytics.html', data)
 
 def teams(request):

@@ -12,8 +12,8 @@
     <div class="calendar">
         <div class="calendar-header">
             <h1 class="month">{{ month }}</h1>
-            <button class="month-switch">></button>
-            <button class="month-switch">></button>
+            <a href="{{ prev }}" class="calendar-button">Предыдущий</a>
+            <a href="{{ next }}" class="calendar-button">Следующий</a>
         </div>
         <div class="calendar-days">
             <div class="row based">
@@ -45,158 +45,12 @@
                     <div>
                     <span class="{{ day.1 }}">{{ day.0 }}</span>
                     {% if day.2 != -1 %}
-                        <p class="prognoz">{{ day.2 }}</p>
+                        <p class="prognoz {{ day.3 }}">{{ day.2 }}</p>
                     {% endif %}
                 </div>
-                {% endofr %}
+                {% endfor %}
             </div>
             {% endfor %}
-            <div class="row">
-                <div>
-                    <span class="hide">28</span>
-                </div>
-                <div>
-                    <span class="hide">29</span>
-                </div>
-                <div>
-                    <span class="hide">30</span>
-                </div>
-                <div>
-                    <span class="hide">31</span>
-                </div>
-                <div>
-                    <span>1</span>
-                    <p class="prognoz">56</p>
-                </div>
-                <div>
-                    <span>2</span>
-                    <p class="prognoz">60</p>
-                </div>
-                <div>
-                    <span class="red">3</span>
-                    <p class="prognoz">62</p>
-                </div>
-            </div>
-            <div class="row">
-                <div>
-                    <span>4</span>
-                    <p class="prognoz">56</p>
-                </div>
-                <div>
-                    <span>5</span>
-                    <p class="prognoz">56</p>
-                </div>
-                <div>
-                    <span>6</span>
-                    <p class="prognoz">56</p>
-                </div>
-                <div>
-                    <span>7</span>
-                    <p class="prognoz">56</p>
-                </div>
-                <div>
-                    <span>8</span>
-                    <p class="prognoz">10</p>
-                </div>
-                <div>
-                    <span>9</span>
-                    <p class="prognoz">99</p>
-                </div>
-                <div>
-                    <span class="red">10</span>
-                    <p class="prognoz">62</p>
-                </div>
-            </div>
-            <div class="row">
-                <div>
-                    <span>11</span>
-                    <p class="prognoz">56</p>
-                </div>
-                <div>
-                    <span>12</span>
-                    <p class="prognoz">56</p>
-                </div>
-                <div>
-                    <span>13</span>
-                    <p class="prognoz">56</p>
-                </div>
-                <div>
-                    <span>14</span>
-                    <p class="prognoz">56</p>
-                </div>
-                <div>
-                    <span>15</span>
-                    <p class="prognoz">10</p>
-                </div>
-                <div>
-                    <span>16</span>
-                    <p class="prognoz">99</p>
-                </div>
-                <div>
-                    <span class="red">17</span>
-                    <p class="prognoz">62</p>
-                </div>
-            </div>
-            <div class="row">
-                <div>
-                    <span>18</span>
-                    <p class="prognoz">56</p>
-                </div>
-                <div>
-                    <span>19</span>
-                    <p class="prognoz">56</p>
-                </div>
-                <div>
-                    <span>20</span>
-                    <p class="prognoz">56</p>
-                </div>
-                <div>
-                    <span>21</span>
-                    <p class="prognoz">56</p>
-                </div>
-                <div>
-                    <span>22</span>
-                    <p class="prognoz">10</p>
-                </div>
-                <div>
-                    <span>23</span>
-                    <p class="prognoz">99</p>
-                </div>
-                <div>
-                    <span class="red">24</span>
-                    <p class="prognoz">62</p>
-                </div>
-            </div>
-            <div class="row">
-                <div>
-                    <span>25</span>
-                    <p class="prognoz">56</p>
-                </div>
-                <div>
-                    <span>26</span>
-                    <p class="prognoz">56</p>
-                </div>
-                <div>
-                    <span>27</span>
-                    <p class="prognoz">56</p>
-                </div>
-                <div>
-                    <span>28</span>
-                    <p class="prognoz">56</p>
-                </div>
-                <div>
-                    <span>29</span>
-                    <p class="prognoz">10</p>
-                </div>
-                <div>
-                    <span>30</span>
-                    <p class="prognoz">99</p>
-                </div>
-                <div>
-                    <span class="red hide">1</span>
-                    <p class="prognoz">62</p>
-                </div>
-            </div>
         </div>
     </div>
 </div>

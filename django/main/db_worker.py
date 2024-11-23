@@ -1,6 +1,6 @@
 import datetime
 import sqlite3
-from .models import Match # type: ignore
+from .models import Match, Prediction
 
 def update(path):
     conn = sqlite3.connect(path)
@@ -11,16 +11,14 @@ def update(path):
     cursor.execute("SELECT year, month, day, prediction, section FROM calendar")
     rows = cursor.fetchall()
 
-    matches = []
     for row in rows:
-        match = Match(
+        print(row)
+        match = Prediction.objects.create(
             date = datetime.date(row[0], row[1], row[2]),
-            prediction=row[3],
+            result=row[3],
             section=row[4],
         )
-        matches.append(match)
-    
-    Match.objects.bulk_create(matches)
+        match.save()
 
     conn.close()
     print("Данные успешно обновлены из SQLite!")
