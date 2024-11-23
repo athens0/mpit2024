@@ -5,8 +5,9 @@
 
 :root{
     --text-color: #000000;
-    --header-text: #105D3B;
+    --header-text: #37B34A;
     --header-highlight: #00392A;
+    --main-text: #105D3B;
 
     --background-color: #ffffff;
 }
@@ -21,7 +22,7 @@ a {
 }
 
 .color {
-    color: var(--header-text);
+    color: var(--main-text);
 }
 
 body{
@@ -44,6 +45,7 @@ header {
     margin: 0px 8vw;
     padding-top: 10px;
 
+    font-family: 'Angry';
     font-weight: 700;
     font-size: 1.2rem;
 
@@ -58,7 +60,7 @@ header {
 }
 
 header .logo {
-    height: 30px;
+    height: 50px;
     margin-right: 3vw;
 }
 
@@ -67,7 +69,6 @@ header .link {
     transition: 0.2s;
     padding: 20px;
     flex-grow: 1 0;
-    font-family: 'Angry';
 }
 
 header .link:hover {
@@ -78,23 +79,126 @@ header .link:hover {
     padding: 8vh 8vw;
 }
 
+.container .teams-flex {
+    justify-content: center;
+}
+
+.container .team-table {
+    margin-top: 20px;
+}
+
+.container .team-table div {
+    display: flex;
+    justify-content: space-between;
+    font-size: larger;
+    margin-bottom: 10px;
+}
+
+.container .matches-table {
+    margin-top: 20px;
+}
+
+.container .matches-table > div {
+    display: flex;
+    justify-content: space-between;
+    background-color: #EEEEEE;
+    border: 2px solid #000;
+    border-radius: 30px;
+    padding: 0px 30px;
+    margin-bottom: 20px;
+    align-items: center;
+}
+
+.calendar-header {
+    display: flex;
+    justify-content: center;
+}
+
+.calendar {
+    font-size: larger;
+}
+
+.calendar .month {
+    margin-right: 10px;
+}
+
+.calendar .month-switch {
+    border: 0;
+    font-size: larger;
+    background: 0;
+    margin: 0 5px;
+}
+
+.calendar-days .row {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    border-bottom: 1px solid #000;
+    padding: 10px;
+}
+
+.calendar-days .hide {
+    opacity: 50%;
+}
+
+.calendar-days .row > div {
+    flex: 1 1 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.calendar-days .prognoz {
+    border-radius: 50%;
+    padding: 10px;
+    background-color: #ddd;
+}
+
+.calendar-days .red {
+    color: #F76060;
+}
+
+.matches-table .match-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.matches-table .match-info h1 {
+    display: inline;
+    margin: 0 10px;
+}
+
+.matches-table .match-info img {
+    margin: 0 20px;
+}
+
+select {
+    border-radius: 20px;
+    border-color: #666666;
+    padding: 5px 20px;
+    font-size: large;
+}
+
+.container2 {
+    background-color: #B9B9B9;
+    padding: 8vh 8vw;
+}
+
+.container2 .card {
+    text-align: center;
+    flex-grow: 1;
+}
+
 .flex {
     display: flex;
-}
-
-.horizontal {
-    flex-direction: column;
-}
-
-.vertical {
-    flex-direction: row;
 }
 
 .square {
     background-color: #D9D9D9;
     border-radius: 15px;
     margin-left: 20px;
-    flex-grow: 1;
+    width: 100%;
 }
 
 .main-text {
@@ -109,6 +213,15 @@ header .link:hover {
     width: 100%;
 }
 
+.main-flex p {
+    max-width: 20vw;
+}
+
+.main-flex .flex {
+    align-items: end;
+    min-width: 20vw;
+}
+
 .main-button {
     background-color: #222222;
     color: white;
@@ -118,9 +231,9 @@ header .link:hover {
 
 .circle-image {
     border-radius: 50%;
-    width: 240px;
-    height: 240px;
     background-color: #fff;
+    width: 15vw;
+    height: 15vw;
 }
 
 .login-cnt {

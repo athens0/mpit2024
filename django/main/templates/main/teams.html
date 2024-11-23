@@ -3,5 +3,44 @@
 {% block title %}Сборные{% endblock %}
 
 {% block content %}
-сборные
+<div class="container">
+    <div class="teams-flex flex">
+        <h1 class="angry">
+            ИГРОКИ <span class="color">СБОРНОЙ</span>
+        </h1>
+    </div>
+    <select name="team" id="team">
+        <option value="basketball">Баскетбол</option>
+        <option value="football">Футбол</option>
+        <option value="volleyball">Волейбол</option>
+    </select>
+    <div class="team-table">
+        <div>
+            <span><b>ФИО</b></span>
+            <span><b>Группа</b></span>
+        </div>
+        <div>
+            <span>Камалова Фатима Джафаровна</span>
+            <span>ИСТ-332</span>
+        </div>
+        <div>
+            <span>Камалова Фатима Джафаровна</span>
+            <span>ИСТ-332</span>
+        </div>
+        <div>
+            <span>Камалова Фатима Джафаровна</span>
+            <span>ИСТ-332</span>
+        </div>
+        <div>
+            <span>Камалова Фатима Джафаровна</span>
+            <span>ИСТ-332</span>
+        </div>
+    </div>
+    <button class="main-button" style="margin-top: 20px;">
+        ДОБАВИТЬ ИГРОКА +
+    </button>
+    <button class="main-button" style="margin-left: 20px;">
+        УДАЛИТЬ ИГРОКА -
+    </button>
+</div>
 {% endblock %}
