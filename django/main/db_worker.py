@@ -1,5 +1,7 @@
 import sqlite3
-from .models import Prediction, Team
+from .models import Prediction, Match
 
 def update(path):
-    pass
+    Match.objects.delete()
+
+    Match.objects.query()
