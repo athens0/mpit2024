@@ -18,10 +18,10 @@ for year in range(2023, 2025):
         for day in range(1, days_in_month + 1):
             print(f"Month: {month}, Day: {day}")
             is_exam = 1 if ((month == 12 and day >= 17) or (month == 5 and day >= 24) or (month == 6 and day <= 26)) else 0
-            is_holiday = 1 if ((month == 1 and day <= 8) or (month == 11 and day == 4) or (month == 2 and day == 23) or (month == 3 and day == 8) or (month == 5 and (day == 1 or day == 9))) else 0  # Пример: Новый год
+            is_holiday = 1 if ((month == 1 and day <= 8) or (month == 11 and day == 4) or (month == 2 and day == 23) or (month == 3 and day == 8) or (month == 5 and (day == 1 or day == 9))) else 0
 
 
-            date = dt.date(year, month, day)  # 1st Jan 2024, 10:30
+            date = dt.date(year, month, day)
             date2 = dt.date(year, 12, 17)
             date3 = dt.date(year, 5, 25)
 
@@ -70,7 +70,7 @@ for year in range(2023, 2025):
                 cursor.execute("""
     INSERT INTO edu (average, year, month, day, is_exam, is_holiday, days_exam, days_holiday, week_day)
     VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
-""", (2, year, month, day, is_exam, is_holiday, days_exam, days_holiday, week_day))
+""", (2.5, year, month, day, is_exam, is_holiday, days_exam, days_holiday, week_day))
 
 
 connection.commit()
