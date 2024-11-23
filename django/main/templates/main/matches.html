@@ -16,50 +16,19 @@
         УДАЛИТЬ МАТЧ -
     </button>
     <div class="matches-table">
+        {% for match in matches %}
         <div>
-            <span>14 ноября, 18:00</span>
+            <span>{{ match.0 }}</span>
             <div class="match-info">
-                <span>СПБПУ</span>
+                <span>{{ match.1 }}</span>
                 <img src="{% static 'main/img/bears.png' %}" alt="логотип">
-                <h1><b>3 : 2</b></h1>
+                <h1><b>{{ match.2 }}</b></h1>
                 <img src="{% static 'main/img/tiger.png' %}" alt="логотип">
-                <span>СПБГУТ</span>
+                <span>{{ match.3 }}</span>
             </div>
-            <span>СК "ПОЛИТЕХНИК"</span>
+            <span>{{ match.4 }}</span>
         </div>
-        <div>
-            <span>14 ноября, 18:00</span>
-            <div class="match-info">
-                <span>СПБПУ</span>
-                <img src="{% static 'main/img/bears.png' %}" alt="логотип">
-                <h1><b>3 : 2</b></h1>
-                <img src="{% static 'main/img/tiger.png' %}" alt="логотип">
-                <span>СПБГУТ</span>
-            </div>
-            <span>СК "ПОЛИТЕХНИК"</span>
-        </div>
-        <div>
-            <span>14 ноября, 18:00</span>
-            <div class="match-info">
-                <span>СПБПУ</span>
-                <img src="{% static 'main/img/bears.png' %}" alt="логотип">
-                <h1><b>3 : 2</b></h1>
-                <img src="{% static 'main/img/tiger.png' %}" alt="логотип">
-                <span>СПБГУТ</span>
-            </div>
-            <span>СК "ПОЛИТЕХНИК"</span>
-        </div>
-        <div>
-            <span>14 ноября, 18:00</span>
-            <div class="match-info">
-                <span>СПБПУ</span>
-                <img src="{% static 'main/img/bears.png' %}" alt="логотип">
-                <h1><b>3 : 2</b></h1>
-                <img src="{% static 'main/img/tiger.png' %}" alt="логотип">
-                <span>СПБГУТ</span>
-            </div>
-            <span>СК "ПОЛИТЕХНИК"</span>
-        </div>
+        {% endfor %}
     </div>
 </div>
 {% endblock %}

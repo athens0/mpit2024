@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect
 from .forms import UserRegisterForm
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login, logout
-
+from .models import Match, Team
 
 def index(request):
     return render(request, 'main/index.html')
@@ -14,7 +14,14 @@ def teams(request):
     return render(request, 'main/teams.html')
 
 def matches(request):
-    return render(request, 'main/matches.html')
+    data = dict()
+    ms = Match.objects.all()
+    ms_front = []
+    for match in ms:
+        current = [match.date, match.team1, f"{match.score1} : {match.score2}", match.team2, match.place]
+        ms_front.append(current)
+    data["matches"] = ms_front
+    return render(request, 'main/matches.html', data)
 
 def profile(request):
     if not request.user.is_authenticated:
