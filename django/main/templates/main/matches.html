@@ -3,5 +3,63 @@
 {% block title %}Матчи{% endblock %}
 
 {% block content %}
-матчи
+<div class="container">
+    <div class="teams-flex flex">
+        <h1 class="angry">
+            МАТЧИ <span class="color">«Черных Медведей»</span>
+        </h1>
+    </div>
+    <button class="main-button" style="margin-top: 20px;">
+        ДОБАВИТЬ МАТЧ +
+    </button>
+    <button class="main-button" style="margin-left: 20px;">
+        УДАЛИТЬ МАТЧ -
+    </button>
+    <div class="matches-table">
+        <div>
+            <span>14 ноября, 18:00</span>
+            <div class="match-info">
+                <span>СПБПУ</span>
+                <img src="{% static 'main/img/bears.png' %}" alt="логотип">
+                <h1><b>3 : 2</b></h1>
+                <img src="{% static 'main/img/tiger.png' %}" alt="логотип">
+                <span>СПБГУТ</span>
+            </div>
+            <span>СК "ПОЛИТЕХНИК"</span>
+        </div>
+        <div>
+            <span>14 ноября, 18:00</span>
+            <div class="match-info">
+                <span>СПБПУ</span>
+                <img src="{% static 'main/img/bears.png' %}" alt="логотип">
+                <h1><b>3 : 2</b></h1>
+                <img src="{% static 'main/img/tiger.png' %}" alt="логотип">
+                <span>СПБГУТ</span>
+            </div>
+            <span>СК "ПОЛИТЕХНИК"</span>
+        </div>
+        <div>
+            <span>14 ноября, 18:00</span>
+            <div class="match-info">
+                <span>СПБПУ</span>
+                <img src="{% static 'main/img/bears.png' %}" alt="логотип">
+                <h1><b>3 : 2</b></h1>
+                <img src="{% static 'main/img/tiger.png' %}" alt="логотип">
+                <span>СПБГУТ</span>
+            </div>
+            <span>СК "ПОЛИТЕХНИК"</span>
+        </div>
+        <div>
+            <span>14 ноября, 18:00</span>
+            <div class="match-info">
+                <span>СПБПУ</span>
+                <img src="{% static 'main/img/bears.png' %}" alt="логотип">
+                <h1><b>3 : 2</b></h1>
+                <img src="{% static 'main/img/tiger.png' %}" alt="логотип">
+                <span>СПБГУТ</span>
+            </div>
+            <span>СК "ПОЛИТЕХНИК"</span>
+        </div>
+    </div>
+</div>
 {% endblock %}

@@ -9,33 +9,37 @@
         <h1 class="angry main-text">КОМАНД НА ИГРАХ</h1>
     </div>
     <div class="main-flex">
-        <p>Анализ состава сборной с <br> учётом статистики игр и <br> нагруженности членов <br> состава</p>
-        <a href="" class="main-button">АДМИН >>>></a>
-        <div class="flex vertical" style="align-items: end;">
-            <div class="square" style="height: 150px; width: 130px;"></div>
-            <div class="square" style="height: 300px; width: 200px;"></div>
+        <p>Анализ состава сборной с учётом статистики игр и нагруженности членов состава</p>
+        {% if user.is_authenticated %}
+            <a href="/analytics" class="main-button">АНАЛИТИКА >>>></a>
+        {% else %}
+            <a href="/login" class="main-button">АДМИН >>>></a>
+        {% endif %}
+        <div class="flex">
+            <div class="square" style="height: 150px;"></div>
+            <div class="square" style="height: 300px;"></div>
         </div>
     </div>
 </div>
-<div class="container" style="background-color: #B9B9B9;">
+<div class="container2">
     <h1 class="angry">О <span class="color">POLYSPORTS</span></h1>
-    <div style="display: flex; margin-top: 40px;">
-        <div style="text-align: center;">
+    <div class="flex" style="display: flex; margin-top: 40px;">
+        <div class="card">
             <img class="circle-image" src="" alt="">
             <p><b>Анализ</b></p>
             <p>Анализ состава сборной с учётом статистики игр и нагруженности членов состава</p>
         </div>
-        <div style="text-align: center;">
+        <div class="card">
             <img class="circle-image" src="" alt="">
             <p><b>Анализ</b></p>
             <p>Анализ состава сборной с учётом статистики игр и нагруженности членов состава</p>
         </div>
-        <div style="text-align: center;">
+        <div class="card">
             <img class="circle-image" src="" alt="">
             <p><b>Анализ</b></p>
             <p>Анализ состава сборной с учётом статистики игр и нагруженности членов состава</p>
         </div>
-        <div style="text-align: center;">
+        <div class="card">
             <img class="circle-image" src="" alt="">
             <p><b>Анализ</b></p>
             <p>Анализ состава сборной с учётом статистики игр и нагруженности членов состава</p>
@@ -72,7 +76,7 @@
         </p>
     </div>
     <div style="width: 100%; display: flex; justify-content: center; margin-top: 30px;">
-        <a href="" class="main-button">К СБОРНЫМ >>>></a>
+        <a href="/teams" class="main-button">К СБОРНЫМ >>>></a>
     </div>
 </div>
 {% endblock %}

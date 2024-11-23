@@ -3,5 +3,224 @@
 {% block title %}Аналитика{% endblock %}
 
 {% block content %}
-аналитика
+<div class="container">
+    <select name="team" id="team">
+        <option value="basketball">Баскетбол</option>
+        <option value="football">Футбол</option>
+        <option value="volleyball">Волейбол</option>
+    </select>
+    <div class="calendar">
+        <div class="calendar-header">
+            <h1 class="month">Ноябрь</h1>
+            <button class="month-switch">></button>
+            <button class="month-switch">></button>
+        </div>
+        <div class="calendar-days">
+            <div class="row based">
+                <div>
+                    <span>Пн</span>
+                </div>
+                <div>
+                    <span>Вт</span>
+                </div>
+                <div>
+                    <span>Ср</span>
+                </div>
+                <div>
+                    <span>Чт</span>
+                </div>
+                <div>
+                    <span>Пт</span>
+                </div>
+                <div>
+                    <span>Сб</span>
+                </div>
+                <div>
+                    <span class="red">Вс</span>
+                </div>
+            </div>
+            <div class="row">
+                <div>
+                    <span class="hide">28</span>
+                </div>
+                <div>
+                    <span class="hide">29</span>
+                </div>
+                <div>
+                    <span class="hide">30</span>
+                </div>
+                <div>
+                    <span class="hide">31</span>
+                </div>
+                <div>
+                    <span>1</span>
+                    <p class="prognoz">56</p>
+                </div>
+                <div>
+                    <span>2</span>
+                    <p class="prognoz">60</p>
+                </div>
+                <div>
+                    <span class="red">3</span>
+                    <p class="prognoz">62</p>
+                </div>
+            </div>
+            <div class="row">
+                <div>
+                    <span>4</span>
+                    <p class="prognoz">56</p>
+                </div>
+                <div>
+                    <span>5</span>
+                    <p class="prognoz">56</p>
+                </div>
+                <div>
+                    <span>6</span>
+                    <p class="prognoz">56</p>
+                </div>
+                <div>
+                    <span>7</span>
+                    <p class="prognoz">56</p>
+                </div>
+                <div>
+                    <span>8</span>
+                    <p class="prognoz">10</p>
+                </div>
+                <div>
+                    <span>9</span>
+                    <p class="prognoz">99</p>
+                </div>
+                <div>
+                    <span class="red">10</span>
+                    <p class="prognoz">62</p>
+                </div>
+            </div>
+            <div class="row">
+                <div>
+                    <span>11</span>
+                    <p class="prognoz">56</p>
+                </div>
+                <div>
+                    <span>12</span>
+                    <p class="prognoz">56</p>
+                </div>
+                <div>
+                    <span>13</span>
+                    <p class="prognoz">56</p>
+                </div>
+                <div>
+                    <span>14</span>
+                    <p class="prognoz">56</p>
+                </div>
+                <div>
+                    <span>15</span>
+                    <p class="prognoz">10</p>
+                </div>
+                <div>
+                    <span>16</span>
+                    <p class="prognoz">99</p>
+                </div>
+                <div>
+                    <span class="red">17</span>
+                    <p class="prognoz">62</p>
+                </div>
+            </div>
+            <div class="row">
+                <div>
+                    <span>18</span>
+                    <p class="prognoz">56</p>
+                </div>
+                <div>
+                    <span>19</span>
+                    <p class="prognoz">56</p>
+                </div>
+                <div>
+                    <span>20</span>
+                    <p class="prognoz">56</p>
+                </div>
+                <div>
+                    <span>21</span>
+                    <p class="prognoz">56</p>
+                </div>
+                <div>
+                    <span>22</span>
+                    <p class="prognoz">10</p>
+                </div>
+                <div>
+                    <span>23</span>
+                    <p class="prognoz">99</p>
+                </div>
+                <div>
+                    <span class="red">24</span>
+                    <p class="prognoz">62</p>
+                </div>
+            </div>
+            <div class="row">
+                <div>
+                    <span>25</span>
+                    <p class="prognoz">56</p>
+                </div>
+                <div>
+                    <span>26</span>
+                    <p class="prognoz">56</p>
+                </div>
+                <div>
+                    <span>27</span>
+                    <p class="prognoz">56</p>
+                </div>
+                <div>
+                    <span>28</span>
+                    <p class="prognoz">56</p>
+                </div>
+                <div>
+                    <span>29</span>
+                    <p class="prognoz">10</p>
+                </div>
+                <div>
+                    <span>30</span>
+                    <p class="prognoz">99</p>
+                </div>
+                <div>
+                    <span class="red hide">1</span>
+                    <p class="prognoz">62</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="teams-flex flex">
+        <h1 class="angry">
+            ИГРОКИ <span class="color">СБОРНОЙ</span>
+        </h1>
+    </div>
+    <div class="team-table">
+        <div>
+            <span><b>ФИО</b></span>
+            <span><b>Группа</b></span>
+        </div>
+        <div>
+            <span>Камалова Фатима Джафаровна</span>
+            <span>ИСТ-332</span>
+        </div>
+        <div>
+            <span>Камалова Фатима Джафаровна</span>
+            <span>ИСТ-332</span>
+        </div>
+        <div>
+            <span>Камалова Фатима Джафаровна</span>
+            <span>ИСТ-332</span>
+        </div>
+        <div>
+            <span>Камалова Фатима Джафаровна</span>
+            <span>ИСТ-332</span>
+        </div>
+    </div>
+    <button class="main-button" style="margin-top: 20px;">
+        ДОБАВИТЬ ИГРОКА +
+    </button>
+    <button class="main-button" style="margin-left: 20px;">
+        УДАЛИТЬ ИГРОКА -
+    </button>
+</div>
 {% endblock %}
