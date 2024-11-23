@@ -41,7 +41,14 @@
             </div>
             {% for row in rows %}
             <div class="row">
-                
+                {% for day in row %}
+                    <div>
+                    <span class="{{ day.1 }}">{{ day.0 }}</span>
+                    {% if day.2 != -1 %}
+                        <p class="prognoz">{{ day.2 }}</p>
+                    {% endif %}
+                </div>
+                {% endofr %}
             </div>
             {% endfor %}
             <div class="row">
@@ -204,22 +211,12 @@
             <span><b>ФИО</b></span>
             <span><b>Группа</b></span>
         </div>
+        {% for member in team %}
         <div>
-            <span>Камалова Фатима Джафаровна</span>
-            <span>ИСТ-332</span>
+            <span>{{ member.0 }}</span>
+            <span>{{ member.1 }}</span>
         </div>
-        <div>
-            <span>Камалова Фатима Джафаровна</span>
-            <span>ИСТ-332</span>
-        </div>
-        <div>
-            <span>Камалова Фатима Джафаровна</span>
-            <span>ИСТ-332</span>
-        </div>
-        <div>
-            <span>Камалова Фатима Джафаровна</span>
-            <span>ИСТ-332</span>
-        </div>
+        {% endfor %}
     </div>
     <button class="main-button" style="margin-top: 20px;">
         ДОБАВИТЬ ИГРОКА +
