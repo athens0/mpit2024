@@ -11,7 +11,11 @@ def analytics(request):
     return render(request, 'main/analytics.html')
 
 def teams(request):
-    return render(request, 'main/teams.html')
+    data = dict()
+    ms = Team.objects.first()
+    if ms:
+        data["team"] = [i.split(',') for i in ms.staff.split(';')]
+    return render(request, 'main/teams.html', data)
 
 def matches(request):
     data = dict()

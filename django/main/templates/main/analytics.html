@@ -11,7 +11,7 @@
     </select>
     <div class="calendar">
         <div class="calendar-header">
-            <h1 class="month">Ноябрь</h1>
+            <h1 class="month">{{ month }}</h1>
             <button class="month-switch">></button>
             <button class="month-switch">></button>
         </div>
@@ -39,6 +39,11 @@
                     <span class="red">Вс</span>
                 </div>
             </div>
+            {% for row in rows %}
+            <div class="row">
+                
+            </div>
+            {% endfor %}
             <div class="row">
                 <div>
                     <span class="hide">28</span>
